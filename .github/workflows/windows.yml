@@ -46,7 +46,7 @@ jobs:
         image: [windows-11-arm, windows-2022]  # Cannot share cache between arm and intel: https://github.com/actions/cache/issues/1622
     steps:
       - name: 'cache test prereqs (stunnel)'
-        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -84,7 +84,7 @@ jobs:
           - { build: 'cmake'    , platform: 'x86_64', tflags: ''       , config: '-DENABLE_DEBUG=ON -DCURL_USE_OPENSSL=ON -DENABLE_THREADED_RESOLVER=OFF', install: 'libssl-devel libssh2-devel', name: 'openssl' }
       fail-fast: false
     steps:
-      - uses: cygwin/cygwin-install-action@f2009323764960f80959895c7bc3bb30210afe4d # v6
+      - uses: cygwin/cygwin-install-action@711d29f3da23c9f4a1798e369a6f01198c13b11a # v6
         with:
           platform: ${{ matrix.platform }}
           site: https://mirrors.kernel.org/sourceware/cygwin/
@@ -178,7 +178,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -400,7 +400,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -536,7 +536,7 @@ jobs:
             ${{ matrix.install }}
 
       - name: 'cache compiler (gcc ${{ matrix.ver }}-${{ matrix.env }})'
-        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         id: cache-compiler
         with:
           path: D:\my-cache
@@ -620,7 +620,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -994,7 +994,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@9255dc7a253b0ccc959486e2bca901246202afeb # v5.0.1
+        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
         id: cache-stunnel
         with:
           path: C:\my-stunnel
