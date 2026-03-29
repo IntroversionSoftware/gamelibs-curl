@@ -46,7 +46,7 @@ jobs:
         image: [windows-11-arm, windows-2022]  # Cannot share cache between arm and intel: https://github.com/actions/cache/issues/1622
     steps:
       - name: 'cache test prereqs (stunnel)'
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -188,7 +188,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -457,7 +457,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -594,7 +594,7 @@ jobs:
             ${{ matrix.install }}
 
       - name: 'cache compiler (gcc ${{ matrix.ver }}-${{ matrix.env }})'
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         id: cache-compiler
         with:
           path: D:\my-cache
@@ -678,7 +678,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         id: cache-stunnel
         with:
           path: C:\my-stunnel
@@ -1068,7 +1068,7 @@ jobs:
 
       - name: 'cache test prereqs (stunnel)'
         if: ${{ matrix.tflags != 'skipall' && matrix.tflags != 'skiprun' }}
-        uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5.0.3
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         id: cache-stunnel
         with:
           path: C:\my-stunnel
